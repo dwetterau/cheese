@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+  </head>
+  <body>
+    <h1>Submit answer:</h1>
+    <form method="post" action="/submit">
+        <div>
+        <label><b>Nickname: </b></label>
+        <input type="text" placeholder="Enter Nickname" name="nickname" required>
+        </div>
+        <div>
+        <label><b>Problem Number: </b></label>
+        <input type="number" placeholder="Enter Problem Number" name="problem" required>
+         </div>
+        <div>
+        <label><b>Answer [0, 999]: </b></label>
+        <input type="number" placeholder="Enter Answer" name="answer" required>
+        </div>
+        <div>
+        <input type="submit" value="Submit" />
+        </div>
+    </form>
+    <div>
+        <a href="/scoreboard">Link to Scoreboard</a>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+  </head>
+  <body>
+    <h1>Scoreboard</h1>
+    <table>{{range .}}
+      <tr>{{range .}}
+          <td>{{.}}</td>
+      {{end}}</tr>
+    {{end}}</table>
+    <div>
+        <a href="/submit.html">Link to Submit</a>
+    </div>
+  </body>
+</html>
