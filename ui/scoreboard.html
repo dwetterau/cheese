@@ -4,6 +4,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="theme-color" content="#000000">
+    <style type="text/css">
+        table {
+            border-collapse: collapse;
+            margin: 1em
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
   </head>
   <body>
     <h1>Scoreboard</h1>
@@ -14,6 +24,11 @@
     {{end}}</table>
     <div>
         <a href="/submit.html">Link to Submit</a>
+        <script type="text/javascript">
+            setTimeout(function() {
+                window.location.reload();
+            }, 1000);
+        </script>
     </div>
   </body>
 </html>

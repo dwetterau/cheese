@@ -10,6 +10,7 @@ import (
 	"path"
 	"sort"
 	"strconv"
+	"strings"
 )
 
 type scoreboard struct {
@@ -154,7 +155,12 @@ func scoreboardHandler(
 		}
 
 		sort.Slice(names, func(i, j int) bool {
-			return len(s.namesToSolves[names[i]]) > len(s.namesToSolves[names[j]])
+			iSolves := len(s.namesToSolves[names[i]])
+			jSolves := len(s.namesToSolves[names[j]])
+			if iSolves == jSolves {
+				return strings.Compare(names[i], names[j]) < 0
+			}
+			return iSolves > jSolves
 		})
 
 		// Sort the problems by number
